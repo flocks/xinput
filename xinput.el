@@ -157,19 +157,10 @@ tabulated-list-mode."
 	  (xinput-mode))
 	(pop-to-buffer-same-window buff)))
 
-(if (boundp 'evil-mode)
-	(progn
-	  (let ((map xinput-mode-map))
-		(evil-define-key 'motion map (kbd "RET") #'xinput-view-device-props))
-	  (let ((map xinput-props-mode-map))
-		(evil-define-key 'motion map (kbd "RET") #'xinput-set-prop))
-	  )
-  (progn
-	(let ((map xinput-mode-map))
-	  (define-key map (kbd "RET") #'xinput-view-device-props))
+(let ((map xinput-mode-map))
+  (define-key map (kbd "RET") #'xinput-view-device-props))
 
-	(let ((map xinput-props-mode-map))
-	  (define-key map (kbd "RET") #'xinput-set-prop))
-	))
+(let ((map xinput-props-mode-map))
+  (define-key map (kbd "RET") #'xinput-set-prop))
 
 (provide 'xinput)
