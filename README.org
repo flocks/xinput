@@ -1,0 +1,13 @@
+* xinput
+
+Emacs interface to xinput
+
+** Overview
+
+It's a very small package that let the user list all the devices
+returned by `xinput` and set props to a speficic devices.
+
+I mainly created that so I could get familiar with
+`tabulated-list-mode` API.
+
+[[https://github.com/flocks/xinput/raw/main/xinput.gif]]
