@@ -1,5 +1,3 @@
-
-
 ;; Author: Florent Teissier <teissierflorent@gmail.com>
 ;; Keywords: xinput, keyboard, mouse
 
